@@ -24,7 +24,7 @@ function NavHeader() {
             <Button variant="outline-warning" className="mx-2">
               Projects
             </Button>
-            <Button variant="outline-warning">Contact Me</Button>
+            <Button variant="outline-warning">Get in Touch</Button>
           </Nav>
         </Navbar.Collapse>
       </Container>
