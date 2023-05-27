@@ -1,23 +1,16 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React from "react";
+import AppRouter from "../src/config/router/index.js";
+import NavHeader from "./components/navHeader.jsx";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>1st edit </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <NavHeader />
+        <AppRouter />
+      </div>
+    );
+  }
 }
 
 export default App;
