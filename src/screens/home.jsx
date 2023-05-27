@@ -4,7 +4,8 @@ import { Button } from "react-bootstrap";
 function Home() {
   return (
     <div>
-      <Button variant="secondary">WOW</Button>
+      <button className="bg-black text-white">WOW</button>
+      <h1 className="text-3xl font-bold underline">Hello world!</h1>
     </div>
   );
 }
