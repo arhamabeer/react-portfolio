@@ -1,4 +1,5 @@
+@import "./scss/variables.scss";
+
 .projectCard {
-  background-color: linear-gradient(red, yellow);
+  background: $projectCardBackground;
 }
-// #060c1e]0f162c
