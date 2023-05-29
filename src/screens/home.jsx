@@ -7,7 +7,7 @@ function Home() {
   return (
     <div>
       <LandingPage />
-      <Projects />
+      {/* <Projects /> */}
     </div>
   );
 }
