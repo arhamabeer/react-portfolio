@@ -1,7 +1,8 @@
 import React from "react";
-import back from "../assets/code.png";
+import aaa from "../assets/aaa-black.png";
 import styles from "./component.module.scss";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import SideNav from "./sideNav";
 
 const open = "<>  ";
 const close = "  </>";
@@ -11,7 +12,7 @@ function LandingPage() {
       <div className="overflow-hidden h-[80vh]">
         <div className={styles.curveBG} />
         <div className={styles.landingPic + " fixed w-2/6"}>
-          {/* <img src={back} alt="photo" /> */}
+          <img src={aaa} alt="photo" className="h-full" />
         </div>
         <div className="relative top-28 left-[45%] text-white">
           <span className="ml-[-40px] font-black  text-3xl text-[#f74b07]">
@@ -37,7 +38,7 @@ function LandingPage() {
             <span className="text-[#f7ab07]">Digital Realities</span>!
           </h4>
           <div>
-            <button className={styles.landBtnAbt + " flex items-center mt-3"}>
+            <button className={styles.landBtnAbt + " flex items-center mt-4"}>
               <span>ABOUT ME &nbsp;</span>
               <span className={styles.landBtnAbtSpan}>
                 <AiOutlineArrowRight />
@@ -46,7 +47,7 @@ function LandingPage() {
           </div>
         </div>
       </div>
-      <div></div>
+      <SideNav current={0} />
     </div>
   );
 }
