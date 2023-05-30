@@ -49,7 +49,7 @@ function LandingPage() {
           </div>
         </div>
       </div>
-      <div className="flex absolute top-[20%] right-10 flex-col">
+      <div className="flex absolute top-[25%] right-10 flex-col">
         <button className={styles.landNavBtn}>
           <AiFillHome size={20} className="w-full" color="#fff" /> <h1>Home</h1>
         </button>
