@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap";
 import LandingPage from "../components/landingPage";
 import Projects from "../components/projects";
 
-function Home() {
+function About() {
   return (
     <div>
       <LandingPage />
@@ -11,4 +11,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default About;

@@ -4,11 +4,15 @@ import { AiFillHome } from "react-icons/ai";
 import { FaUserAlt } from "react-icons/fa";
 import { BsCollectionFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 
 function SideNav({ current }) {
+  const navigate = useNavigate();
+
   return (
     <div className="flex absolute top-[25%] right-10 flex-col">
       <button
+        onClick={() => navigate("/")}
         className={
           current == 0
             ? styles.landNavBtn + " bg-[#ffb400]"
@@ -18,6 +22,7 @@ function SideNav({ current }) {
         <AiFillHome size={20} className="w-full" color="#fff" /> <h1>Home</h1>
       </button>
       <button
+        onClick={() => navigate("/abt")}
         className={
           current == 1
             ? styles.landNavBtn + " bg-[#ffb400]"
@@ -27,6 +32,7 @@ function SideNav({ current }) {
         <FaUserAlt size={20} className="w-full" color="#fff" /> <h1> About</h1>
       </button>
       <button
+        onClick={() => navigate("/projects")}
         className={
           current == 2
             ? styles.landNavBtn + " bg-[#ffb400]"
@@ -37,6 +43,7 @@ function SideNav({ current }) {
         <h1> Projects</h1>
       </button>
       <button
+        onClick={() => navigate("/contact")}
         className={
           current == 3
             ? styles.landNavBtn + " bg-[#ffb400]"
