@@ -75,3 +75,49 @@
     background-color: $curveBG;
   }
 }
+
+.landNavBtn {
+  width: 50px;
+  height: 50px;
+  list-style: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+  margin: 20px 0;
+  border-radius: 50%;
+  background: #2b2a2a;
+  cursor: pointer;
+
+  &:hover {
+    border: none;
+    outline: none;
+    border-radius: 30%;
+    background-color: $curveBG !important;
+  }
+  &:hover h1 {
+    opacity: 1 !important;
+    right: 35px;
+    margin: 0;
+    text-align: center;
+    border-radius: 30px 0 0 30px;
+    background-color: $curveBG;
+    width: max-content;
+  }
+  h1 {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    color: #fff;
+    line-height: 50px;
+    font-weight: 500;
+    transition: all 0.3s;
+    border-radius: 30px;
+    text-transform: uppercase;
+    padding: 0 25px 0 30px;
+    height: 50px;
+    margin: 0;
+  }
+}
