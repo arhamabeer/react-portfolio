@@ -1,0 +1,12 @@
+@import "../scss/variables.scss";
+
+.seperator {
+  background-color: $greyDefault;
+  width: 35%;
+  height: 3px;
+  align-self: center;
+  display: flex;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  box-shadow: 1px 1px 10px $greyDefault;
+}
