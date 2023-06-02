@@ -123,3 +123,16 @@
 .abtCard {
   border: 1px solid $greyDefault !important;
 }
+
+.EduAndExpCard {
+  border-left: 1px solid $greyDefault;
+  &Year {
+    background-color: $greyDefault;
+  }
+  &Company {
+    color: $greyDefault;
+  }
+  &Pos {
+    color: $curveBG;
+  }
+}

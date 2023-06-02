@@ -9,8 +9,10 @@ function EduAndExp() {
           EXPERIENCE & EDUCATION
         </h1>
       </div>
-      <div className="text-white">
+      <div className="text-white px-40">
         <div>
+          <EduAndExpCard />
+          <EduAndExpCard />
           <EduAndExpCard />
         </div>
         <div></div>
