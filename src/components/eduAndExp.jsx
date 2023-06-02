@@ -38,7 +38,7 @@ function EduAndExp() {
     <div className="h-auto">
       <div className="flex items-center justify-center mb-11">
         <h1 className="text-2xl font-bold text-white">
-          EXPERIENCE & EDUCATION
+          EXPERIENCES & EDUCATION
         </h1>
       </div>
       <div className="text-white flex mx-2 px-28 justify-between">
