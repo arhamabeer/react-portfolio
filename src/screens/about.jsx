@@ -1,12 +1,22 @@
 import React from "react";
-import { Button } from "react-bootstrap";
-import LandingPage from "../components/landingPage";
-import Projects from "../components/projects";
+import SideNav from "../components/sideNav";
+import EduAndExp from "../components/eduAndExp";
+import PersonalInfo from "../components/personalInfo";
+import styles from "./screens.module.scss";
 
+const aboutCardsData = [
+  { numbers: `2+`, stat: "YEARS OF EXPERIENCE" },
+  { numbers: `25+`, stat: "COMPLETED PROJECTS " },
+  { numbers: `5+`, stat: "HAPPY CLIENTS & COMPANIES" },
+  { numbers: `10+`, stat: "RECOMMENDATIONS" },
+];
 function About() {
   return (
-    <div>
-      <LandingPage />
+    <div className="h-auto flex flex-col">
+      <PersonalInfo aboutCardsData={aboutCardsData} />
+      <hr className={styles.seperator} />
+      <EduAndExp />
+      <SideNav current={1} />
     </div>
   );
 }

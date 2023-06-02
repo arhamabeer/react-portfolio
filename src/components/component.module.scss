@@ -104,7 +104,6 @@
   }
   h1 {
     width: max-content;
-    z-index: -1;
     position: absolute;
     top: 0;
     right: 0;
@@ -118,5 +117,22 @@
     padding: 0 25px 0 30px;
     height: 50px;
     margin: 0;
+  }
+}
+
+.abtCard {
+  border: 1px solid $greyDefault !important;
+}
+
+.EduAndExpCard {
+  border-left: 1px solid $greyDefault;
+  &Year {
+    background-color: $greyDefault;
+  }
+  &Company {
+    color: $greyDefault;
+  }
+  &Pos {
+    color: $curveBG;
   }
 }
