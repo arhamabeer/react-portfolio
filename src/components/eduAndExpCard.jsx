@@ -1,31 +1,38 @@
 import React from "react";
-import { MdWork } from "react-icons/md";
+import { MdWork, MdCastForEducation } from "react-icons/md";
 import styles from "./component.module.scss";
-function EduAndExpCard() {
+
+function EduAndExpCard({ experience }) {
   return (
-    <div className="my-4 w-[45%]">
+    <div className="my-4">
       <div className="relative -left-4">
         <div className="bg-[#ffb400] rounded-3xl w-fit p-2">
-          <MdWork size={20} className="w-full" color="#fff" />
+          {!experience.type ? (
+            <MdWork size={20} className="w-full" color="#fff" />
+          ) : (
+            <MdCastForEducation size={20} className="w-full" color="#fff" />
+          )}
         </div>
       </div>
-      <div className={styles.EduAndExpCard + " pl-3"}>
+      <div className={styles.EduAndExpCard + " pl-6"}>
         <h3
           className={
             styles.EduAndExpCardYear +
-            " rounded-2xl text-[11px] w-fit py-[2px] px-1"
+            " rounded-2xl text-[11px] w-fit py-[2px] px-2"
           }
         >
-          2020-2021
+          {experience.duration}
         </h3>
         <h1 className="font-bold my-2">
-          <span className={styles.EduAndExpCardPos}>WEB DEVELOPER</span>
-          <span className={styles.EduAndExpCardCompany}> - BRAINCROP</span>
+          <span className={styles.EduAndExpCardPos}>
+            {experience.position.toUpperCase()}
+          </span>
+          <span className={styles.EduAndExpCardCompany}>
+            {" "}
+            - {experience.company.toUpperCase()}
+          </span>
         </h1>
-        <h4 className="text-xs">
-          Lorem, ipsum dolor sit amet consectetur adipisicing text-2xl font-bold
-          mb-3 text-whitetext-2xl font-bold mb-3 text-whitetext-2xl font-bold
-        </h4>
+        <h4 className="text-xs">{experience.desc}</h4>
       </div>
     </div>
   );
