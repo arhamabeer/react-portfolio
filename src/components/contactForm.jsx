@@ -3,7 +3,7 @@ import ContactFormInput from "./contactFormInput";
 
 function ContactForm() {
   return (
-    <div className="my-4 w-3/4">
+    <div className="my-4">
       <div className="flex my-2 w-full justify-between">
         <div className="w-6/12">
           <ContactFormInput type={0} placeholder={"Your Name"} />
