@@ -23,9 +23,7 @@ function ContactForm() {
       </div>
       <div>
         <button className={styles.landBtnAbt + " flex items-center mt-4"}>
-          <span>
-            SEND <MESSAGE></MESSAGE> &nbsp;
-          </span>
+          <span>SEND MESSAGE &nbsp;</span>
           <span className={styles.landBtnAbtSpan}>
             <AiOutlineArrowRight />
           </span>

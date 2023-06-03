@@ -1,6 +1,13 @@
 import React from "react";
 import ContactInfoCard from "./contactInfoCard";
-import { FaMapMarkedAlt } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaGithub,
+  FaInstagram,
+  FaLinkedinIn,
+  FaMapMarkedAlt,
+  FaTwitter,
+} from "react-icons/fa";
 import { HiMailOpen } from "react-icons/hi";
 
 const contacts = [
@@ -27,6 +34,63 @@ function ContactInfo() {
       {contacts.map((item) => (
         <ContactInfoCard item={item} />
       ))}
+      <div className="flex mt-10">
+        <a
+          href="https://www.facebook.com/arham.aaa"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FaFacebookF
+            size={25}
+            className="cursor-pointer mr-3 "
+            color="#ffb400"
+          />
+        </a>
+        <a
+          href="https://www.github.com/arhamabeer"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FaGithub
+            size={25}
+            className="cursor-pointer mr-3 "
+            color="#ffb400"
+          />
+        </a>
+        <a
+          href="https://www.twitter.com/ArhamAbeer_"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FaTwitter
+            size={25}
+            className="cursor-pointer mr-3 "
+            color="#ffb400"
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/arhamabeer"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FaLinkedinIn
+            size={25}
+            className="cursor-pointer mr-3 "
+            color="#ffb400"
+          />
+        </a>
+        <a
+          href="https://www.instagram.com/arham.abeer"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FaInstagram
+            size={25}
+            className="cursor-pointer mr-3 "
+            color="#ffb400"
+          />
+        </a>
+      </div>
     </div>
   );
 }
