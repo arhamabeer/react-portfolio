@@ -1,6 +1,9 @@
 import React from "react";
 import ContactFormInput from "./contactFormInput";
 
+import styles from "./component.module.scss";
+import { AiOutlineArrowRight } from "react-icons/ai";
+
 function ContactForm() {
   return (
     <div className="my-4">
@@ -17,6 +20,16 @@ function ContactForm() {
       </div>
       <div className="my-4">
         <ContactFormInput type={1} placeholder={"Your Message"} />
+      </div>
+      <div>
+        <button className={styles.landBtnAbt + " flex items-center mt-4"}>
+          <span>
+            SEND <MESSAGE></MESSAGE> &nbsp;
+          </span>
+          <span className={styles.landBtnAbtSpan}>
+            <AiOutlineArrowRight />
+          </span>
+        </button>{" "}
       </div>
     </div>
   );
