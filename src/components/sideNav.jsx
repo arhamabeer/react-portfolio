@@ -10,11 +10,11 @@ function SideNav({ current }) {
   const navigate = useNavigate();
 
   return (
-    <div className="flex absolute top-[25%] right-10 flex-col">
+    <div className="flex fixed top-[25%] right-10 flex-col">
       <button
         onClick={() => navigate("/")}
         className={
-          current == 0
+          current === 0
             ? styles.landNavBtn + " bg-[#ffb400]"
             : styles.landNavBtn + " bg-[#2b2a2a]"
         }
@@ -24,7 +24,7 @@ function SideNav({ current }) {
       <button
         onClick={() => navigate("/abt")}
         className={
-          current == 1
+          current === 1
             ? styles.landNavBtn + " bg-[#ffb400]"
             : styles.landNavBtn + " bg-[#2b2a2a]"
         }
@@ -34,7 +34,7 @@ function SideNav({ current }) {
       <button
         onClick={() => navigate("/projects")}
         className={
-          current == 2
+          current === 2
             ? styles.landNavBtn + " bg-[#ffb400]"
             : styles.landNavBtn + " bg-[#2b2a2a]"
         }
@@ -45,7 +45,7 @@ function SideNav({ current }) {
       <button
         onClick={() => navigate("/contact")}
         className={
-          current == 3
+          current === 3
             ? styles.landNavBtn + " bg-[#ffb400]"
             : styles.landNavBtn + " bg-[#2b2a2a]"
         }
