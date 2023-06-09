@@ -4,8 +4,8 @@ import AboutCards from "./aboutCards";
 function PersonalInfo({ aboutCardsData }) {
   return (
     <div className="h-auto">
-      <div className="flex items-center justify-center my-16">
-        <h1 className="font-black text-5xl text-white">
+      <div className="flex items-center justify-center max-sm:my-8 my-16">
+        <h1 className="font-black text-5xl max-sm:text-3xl text-white">
           ABOUT <span className="text-[#ffb400]">ME</span>
         </h1>
       </div>
