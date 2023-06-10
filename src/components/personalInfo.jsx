@@ -4,15 +4,15 @@ import AboutCards from "./aboutCards";
 function PersonalInfo({ aboutCardsData }) {
   return (
     <div className="h-auto">
-      <div className="flex items-center justify-center my-16">
-        <h1 className="font-black text-5xl text-white">
+      <div className="flex items-center justify-center max-sm:my-8 my-16">
+        <h1 className="font-black text-5xl max-sm:text-3xl text-white">
           ABOUT <span className="text-[#ffb400]">ME</span>
         </h1>
       </div>
-      <div className="text-gray-400 flex w-[90%]">
-        <div className="px-16 flex flex-col w-[50%]">
+      <div className="text-gray-400 flex w-[90%] max-sm:w-full max-sm:flex-col">
+        <div className="px-16 flex flex-col w-[50%] max-sm:w-full max-sm:px-8">
           <h1 className="text-2xl font-bold mb-3 text-white">PERSONAL INFO</h1>
-          <div className="flex items-start justify-between">
+          <div className="flex items-start justify-between max-sm:flex-col">
             <div>
               <h4 className="text-sm my-3">
                 Name:{" "}
@@ -54,7 +54,7 @@ function PersonalInfo({ aboutCardsData }) {
             </div>
           </div>
         </div>
-        <div className="w-[50%] flex flex-wrap justify-between items-center">
+        <div className="w-[50%] max-sm:w-full flex flex-wrap justify-between items-center max-sm:px-2">
           {aboutCardsData.map((item, ind) => (
             <AboutCards numbers={item.numbers} stat={item.stat} />
           ))}
