@@ -9,25 +9,32 @@ const close = "  </>";
 function LandingPage() {
   return (
     <div>
-      <div className="overflow-hidden h-[80vh]">
-        <div className={styles.curveBG} />
-        <div className={styles.landingPic + " fixed w-2/6"}>
+      <div className="overflow-hidden max-sm:flex max-sm:flex-col h-[80vh]">
+        <div className={"max-sm:hidden " + styles.curveBG} />
+        <div
+          className={
+            styles.landingPic +
+            " fixed w-2/6 max-sm: flex self-center //max-sm:hidden"
+          }
+        >
           <img src={aaa} alt="photo" className="h-full" />
         </div>
-        <div className="relative top-28 left-[45%] text-white">
-          <span className="ml-[-40px] font-black  text-3xl text-[#f74b07]">
+        <div className="relative top-28 left-[45%] text-white max-sm:left-0 max-sm:items-center max-sm:flex max-sm:flex-col ">
+          <span className="ml-[-40px] font-black  text-3xl hidden text-[#f74b07]">
             {open}
           </span>
-          <h1 className=" font-black text-[#f7ab07] text-5xl">
+          <h1 className=" font-black text-[#f7ab07] text-5xl max-sm:text-3xl">
             I'M ARHAM ABEER.
           </h1>
-          <h1 className="my-2  text-4xl font-black">SOFTWARE ENGINEER</h1>
-          <span className="ml-[-40px] text-[#f74b07] font-black  text-3xl ">
+          <h1 className="my-2  text-4xl max-sm:text-2xl font-black">
+            SOFTWARE ENGINEER
+          </h1>
+          <span className="ml-[-40px] text-[#f74b07] font-black  text-3xl hidden ">
             {close}
           </span>
 
-          <h4 className="text-xl mt-3">
-            <span className="text-[#f7ab07] font-bold text-2xl">
+          <h4 className="text-xl max-sm:text-base mt-3 max-sm:text-center">
+            <span className="text-[#f7ab07] font-bold text-2xl max-sm:text-lg">
               Coding Maestro!
             </span>
             <br />
