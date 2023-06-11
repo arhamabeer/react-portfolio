@@ -50,7 +50,7 @@ function Skills() {
       <div className="flex items-center justify-center mb-11">
         <h1 className="text-2xl font-bold text-white">MY SKILLS</h1>
       </div>
-      <div className="flex flex-wrap px-[10%] justify-center">
+      <div className="flex flex-wrap px-[10%] max-sm:px-2 justify-center">
         {skills.map((item) => (
           <SkillProgress data={item} />
         ))}

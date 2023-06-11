@@ -4,7 +4,7 @@ import "react-circular-progressbar/dist/styles.css";
 
 function SkillProgress({ data }) {
   return (
-    <div className="w-[13%] my-3 mx-8 flex flex-col justify-center items-center">
+    <div className="w-[13%] max-sm:w-2/5 my-3 mx-8 max-sm:mx-2 flex flex-col justify-center items-center">
       <CircularProgressbar
         value={data.percent}
         maxValue={1}
