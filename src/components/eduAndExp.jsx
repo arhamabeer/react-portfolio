@@ -37,7 +37,7 @@ const exp = [
 function EduAndExp() {
   return (
     <div className="h-auto">
-      <div className="flex items-center justify-center mb-11">
+      <div className="flex items-center justify-center mb-11 max-sm:mb-6">
         <h1 className="text-2xl font-bold text-white">
           EXPERIENCES & EDUCATION
         </h1>
