@@ -140,3 +140,13 @@
 .contactFormInout {
   background-color: $greyDefault;
 }
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .landingPic {
+    left: auto;
+    width: 230px;
+    height: 230px;
+    border-radius: 100px;
+    position: relative;
+  }
+}
