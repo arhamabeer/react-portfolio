@@ -11,9 +11,9 @@ function Contact() {
           GET IN <span className="text-[#ffb400]">TOUCH</span>
         </h1>
       </div>
-      <div className="flex px-[10%] justify-between self-center">
+      <div className="flex px-[10%] max-sm:px-4 justify-between self-center max-sm:flex-col">
         <ContactInfo />
-        <div className="w-2/3">
+        <div className="w-2/3 max-sm:w-full ">
           <ContactForm />
         </div>
       </div>
