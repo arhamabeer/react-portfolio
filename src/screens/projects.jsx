@@ -1,5 +1,7 @@
 import React from "react";
 import SideNav from "../components/sideNav";
+import ProjectCard from "../components/projectCard";
+import { myProjects } from "../projects";
 
 function Projects() {
   return (
@@ -10,12 +12,12 @@ function Projects() {
         </h1>
       </div>
 
-      <div className="flex justify-center items-center text-white mt-44 flex-col h-full">
-        <h1 className="text-3xl h-full text-center">
-          This section is under development, please revisit in a day. Thanks{" "}
-        </h1>
-        <SideNav current={2} />
+      <div className="flex justify-center items-center text-white flex-wrap ">
+        {myProjects.map((proj) => (
+          <ProjectCard project={proj} key={proj.name} />
+        ))}
       </div>
+      <SideNav current={2} />
     </div>
   );
 }
