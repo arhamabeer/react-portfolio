@@ -5,7 +5,7 @@ import ContactInfo from "../components/contactInfo";
 
 function Contact() {
   return (
-    <div className="h-auto flex flex-col text-white">
+    <div className="h-[100vh] justify-center flex flex-col text-white">
       <div className="flex items-center justify-center my-8">
         <h1 className="font-black text-5xl max-sm:text-3xl text-white">
           GET IN <span className="text-[#ffb400]">TOUCH</span>
