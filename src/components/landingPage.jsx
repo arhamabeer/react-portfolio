@@ -9,7 +9,7 @@ const close = "  </>";
 function LandingPage() {
   return (
     <div>
-      <div className="overflow-hidden max-sm:flex max-sm:top-20 max-sm:relative max-sm:flex-col h-[80vh] ">
+      <div className="overflow-hidden max-sm:flex max-sm:flex-col h-[100vh]">
         <div className={"max-sm:hidden " + styles.curveBG} />
         <div
           className={
