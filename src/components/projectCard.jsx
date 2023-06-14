@@ -20,7 +20,7 @@ function ProjectCard({ project }) {
   };
   return (
     <div
-      className={`w-[370px] h-[230px] m-2 rounded-2xl cursor-pointer projectCard flex flex-col bg-cover bg-center bg-no-repeat`}
+      className={`w-[370px] h-[230px] m-2 rounded-2xl cursor-pointer projectCard flex flex-col bg-cover bg-center bg-no-repeat max-sm:w-[80%]`}
       style={divStyles}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
