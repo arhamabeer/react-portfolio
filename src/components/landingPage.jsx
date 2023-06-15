@@ -17,7 +17,7 @@ function LandingPage() {
             " fixed w-2/6 max-sm: flex self-center //max-sm:hidden"
           }
         >
-          <img src={aaa} alt="photo" className="h-full" />
+          <img src={aaa} alt="avatar-photo" className="h-full" />
         </div>
         <div className="relative top-28 left-[45%] text-white max-sm:left-0 max-sm:items-center max-sm:flex max-sm:flex-col ">
           <span className="ml-[-40px] font-black  text-3xl hidden text-[#f74b07]">
