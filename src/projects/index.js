@@ -1,6 +1,6 @@
 export const myProjects = [
   {
-    img: "",
+    img: "https://media.istockphoto.com/id/1253862403/vector/80s-synthwave-styled-landscape-with-blue-grid-mountains-and-sun-over-canyon.jpg?s=612x612&w=0&k=20&c=2d9zWZ_Q97QbsRa_9N8FURlWWnJ_QxF7RAtHKM8Ijfo=",
     type: "Web Application",
     for: "Self",
     name: "Portfolio",
@@ -8,7 +8,7 @@ export const myProjects = [
     url: "aaa-portfolio.web.app",
   },
   {
-    img: "",
+    img: "https://static.vecteezy.com/system/resources/previews/006/076/790/original/10-abstract-modern-attractive-black-and-red-background-free-vector.jpg",
     type: "Web Application",
     for: "Federal Urdu University, Pakistan",
     name: "CS-Talks",
@@ -16,7 +16,7 @@ export const myProjects = [
     url: "fuuastcstalks.com",
   },
   {
-    img: "",
+    img: "https://images.pond5.com/attractive-background-footage-086592526_prevstill.jpeg",
     type: "Desktop Application",
     for: "Braincrop",
     name: "IceBox Pantry",
@@ -24,7 +24,7 @@ export const myProjects = [
     url: "",
   },
   {
-    img: "",
+    img: "https://png.pngtree.com/thumb_back/fh260/background/20190521/pngtree-3d-neon-light-abstract-background-image_111005.jpg",
     type: "Mobile Application",
     for: "Braincrop",
     name: "IceBox Pantry",
@@ -32,7 +32,7 @@ export const myProjects = [
     url: "",
   },
   {
-    img: "",
+    img: "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/129325364/original/afaddcb9d7dfaaf5bff7ef04101935814665ac16/design-an-attractive-background-for-your-website.png",
     type: "Web Application",
     for: "Self",
     name: "Blood Bank",
@@ -40,7 +40,7 @@ export const myProjects = [
     url: "",
   },
   {
-    img: "",
+    img: "https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg",
     type: "Web Application",
     for: "Self",
     name: "Employee Management System",
@@ -48,7 +48,7 @@ export const myProjects = [
     url: "",
   },
   {
-    img: "",
+    img: "https://png.pngtree.com/thumb_back/fh260/background/20201026/pngtree-futuristic-shape-abstract-background-chemistry-technology-concept-for-website-image_438818.jpg",
     type: "Mobile Application",
     for: "Self",
     name: "Blood Bank Mobile App",
@@ -56,7 +56,7 @@ export const myProjects = [
     url: "",
   },
   {
-    img: "",
+    img: "https://i.pinimg.com/736x/ab/f7/de/abf7de18d534de6166c39fc2925259f0.jpg",
     type: "Web Application",
     for: "Self",
     name: "Copment",
@@ -64,7 +64,7 @@ export const myProjects = [
     url: "",
   },
   {
-    img: "",
+    img: "https://images.unsplash.com/photo-1511447333015-45b65e60f6d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80",
     type: "Server Application",
     for: "AGS",
     name: "NFT Inventory Management",
@@ -72,7 +72,7 @@ export const myProjects = [
     url: "",
   },
   {
-    img: "",
+    img: "https://png.pngtree.com/thumb_back/fh260/background/20201123/pngtree-digital-technology-low-poly-design-image_499020.jpg",
     type: "Server Application",
     for: "AGS",
     name: "Live Chat for NFT Trading",
@@ -80,7 +80,7 @@ export const myProjects = [
     url: "",
   },
   {
-    img: "",
+    img: "https://www.pixelstalk.net/wp-content/uploads/images6/Aesthetic-Neon-Wallpaper-City.jpg",
     type: "Mobile Application",
     for: "Self",
     name: "Weather Mobile App",
@@ -88,7 +88,7 @@ export const myProjects = [
     url: "",
   },
   {
-    img: "",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB7jv1qIxtYApS6O4rPw9u_O36YJTgJJv_8c3PkSXiCg06JOAO7Fd7as8agpw_8B8JM90&usqp=CAU",
     type: "Web Application",
     for: "Self",
     name: "COVID-19 Tracker",
@@ -96,7 +96,7 @@ export const myProjects = [
     url: "",
   },
   {
-    img: "",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQri_rcUUg49ezCaSJA9zHKAJS8nINTZLS1mpwuSfhTnKOqtt6nPlDz1AS2KoypQiNxNYM&usqp=CAU",
     type: "Web  Application",
     for: "AR Distributors",
     name: "AR-Enterprises",

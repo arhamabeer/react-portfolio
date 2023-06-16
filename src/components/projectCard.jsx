@@ -15,8 +15,8 @@ function ProjectCard({ project }) {
 
   const divStyles = {
     backgroundImage: hovered
-      ? "linear-gradient(65deg, #ffb400, #805712, #070d1f91)"
-      : `url(${back})`,
+      ? "linear-gradient(65deg, rgba(255, 180, 0,0.7), rgba(128, 87, 18,0.2), rgba(7, 13, 31, 0.8)"
+      : `url(${project.img})` || `url(${back})`,
   };
   return (
     <div
