@@ -1,5 +1,5 @@
 import React from "react";
-import aaa from "../assets/avat.png";
+import aaa from "../assets/avat1.png";
 import styles from "./component.module.scss";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import SideNav from "./sideNav";
