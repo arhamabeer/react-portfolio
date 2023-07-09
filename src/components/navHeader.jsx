@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import Logo from "../assets/aaa-logo-gold.png";
+import Logo from "../assets/aaa.png";
 
 function NavHeader() {
   return (
