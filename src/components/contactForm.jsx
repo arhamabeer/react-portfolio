@@ -29,7 +29,7 @@ function ContactForm() {
       );
       await resp.json();
       Swal.fire({
-        position: "top",
+        position: "center",
         icon: "success",
         title: "Your message has been sent",
         showConfirmButton: false,
@@ -46,8 +46,8 @@ function ContactForm() {
         <div className="w-6/12">
           <ContactFormInput
             type={0}
+            data={data.name}
             placeholder={"Your Name"}
-            data={data}
             setData={(e) =>
               setData((prev) => ({
                 ...prev,
@@ -59,8 +59,8 @@ function ContactForm() {
         <div className="ml-3 w-6/12">
           <ContactFormInput
             type={0}
+            data={data.email}
             placeholder={"Your Email"}
-            data={data}
             setData={(e) =>
               setData((prev) => ({
                 ...prev,
@@ -73,7 +73,7 @@ function ContactForm() {
       <div className="my-4">
         <ContactFormInput
           type={0}
-          data={data}
+          data={data.subject}
           placeholder={"Your Subject"}
           setData={(e) =>
             setData((prev) => ({
@@ -86,7 +86,7 @@ function ContactForm() {
       <div className="my-4">
         <ContactFormInput
           type={1}
-          data={data}
+          data={data.message}
           placeholder={"Your Message"}
           setData={(e) =>
             setData((prev) => ({
