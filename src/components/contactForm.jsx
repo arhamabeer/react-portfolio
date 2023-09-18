@@ -3,6 +3,7 @@ import ContactFormInput from "./contactFormInput";
 
 import styles from "./component.module.scss";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import Swal from "sweetalert2";
 
 function ContactForm() {
   const [data, setData] = useState({
@@ -27,6 +28,14 @@ function ContactForm() {
         }
       );
       await resp.json();
+      Swal.fire({
+        position: "top",
+        icon: "success",
+        title: "Your message has been sent",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      setData({ ...data, email: "", name: "", message: "", subject: "" });
     } catch (ex) {
       console.log("error", ex);
     }
@@ -38,6 +47,7 @@ function ContactForm() {
           <ContactFormInput
             type={0}
             placeholder={"Your Name"}
+            data={data}
             setData={(e) =>
               setData((prev) => ({
                 ...prev,
@@ -50,6 +60,7 @@ function ContactForm() {
           <ContactFormInput
             type={0}
             placeholder={"Your Email"}
+            data={data}
             setData={(e) =>
               setData((prev) => ({
                 ...prev,
@@ -62,6 +73,7 @@ function ContactForm() {
       <div className="my-4">
         <ContactFormInput
           type={0}
+          data={data}
           placeholder={"Your Subject"}
           setData={(e) =>
             setData((prev) => ({
@@ -74,6 +86,7 @@ function ContactForm() {
       <div className="my-4">
         <ContactFormInput
           type={1}
+          data={data}
           placeholder={"Your Message"}
           setData={(e) =>
             setData((prev) => ({
