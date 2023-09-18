@@ -5,6 +5,8 @@ module.exports = {
     extend: {
       colors: {
         bgGray: "#333232",
+        projModalBg: "rgba(17, 17, 17, 0.75)",
+        curveBG: "#ffb400",
       },
     },
   },
