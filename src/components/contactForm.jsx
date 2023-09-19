@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ContactFormInput from "./contactFormInput";
 import { resp } from "../config/firebase/_index.js";
 
 import styles from "./component.module.scss";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import Swal from "sweetalert2";
+import { email_regex } from "../constants";
 
 function ContactForm() {
   const [data, setData] = useState({
@@ -13,6 +14,40 @@ function ContactForm() {
     message: "",
     subject: "",
   });
+  const [errors, setErrors] = useState({
+    email: false,
+    message: false,
+  });
+
+  useEffect(() => {
+    if (errors.email) {
+      if (email_regex.test(errors.email)) {
+        setErrors((prev) => ({
+          ...prev,
+          email: false,
+        }));
+      } else {
+        setErrors((prev) => ({
+          ...prev,
+          email: true,
+        }));
+      }
+    }
+    if (errors.message) {
+      if (email_regex.test(errors.message)) {
+        setErrors((prev) => ({
+          ...prev,
+          message: false,
+        }));
+      } else {
+        setErrors((prev) => ({
+          ...prev,
+          message: true,
+        }));
+      }
+    }
+  }, [errors]);
+
   const handleSubmit = async () => {
     try {
       resp(data);
