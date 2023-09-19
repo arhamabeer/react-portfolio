@@ -104,3 +104,6 @@ export const myProjects = [
     url: "",
   },
 ];
+
+export const __DANGER__VIRUS_WILL_HACK_YOUR_SYSTEM__XZQYPBMJDX__ =
+  "https://v1.nocodeapi.com/arhamabeer/google_sheets/xFaQponzymHukibi?tabId=Sheet1";

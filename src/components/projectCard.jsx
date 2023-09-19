@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import back from "../assets/code.png";
 
-function ProjectCard({ project }) {
+function ProjectCard({ project, setModalData }) {
   const { name, type } = project;
   const [hovered, setHovered] = useState(false);
 
@@ -24,6 +24,7 @@ function ProjectCard({ project }) {
       style={divStyles}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      onClick={() => setModalData(project)}
     >
       <div className="m-auto h-fit flex-col text-center hidden projectCardInner">
         <h1 className="text-xl my-2">{type}</h1>

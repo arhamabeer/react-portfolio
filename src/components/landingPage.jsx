@@ -3,10 +3,13 @@ import aaa from "../assets/avat1.png";
 import styles from "./component.module.scss";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import SideNav from "./sideNav";
+import { useNavigate } from "react-router-dom";
 
 const open = "<>  ";
 const close = "  </>";
 function LandingPage() {
+  const navigate = useNavigate();
+
   return (
     <div>
       <div className="overflow-hidden max-sm:flex max-sm:flex-col h-[100vh]">
@@ -17,7 +20,7 @@ function LandingPage() {
             " fixed w-2/6 max-sm: flex self-center //max-sm:hidden"
           }
         >
-          <img src={aaa} alt="avatar-photo" className="h-full" />
+          <img src={aaa} alt="avatarphoto" className="h-full" />
         </div>
         <div className="relative top-28 left-[45%] text-white max-sm:left-0 max-sm:items-center max-sm:flex max-sm:flex-col ">
           <span className="ml-[-40px] font-black  text-3xl hidden text-[#f74b07]">
@@ -45,7 +48,10 @@ function LandingPage() {
             <span className="text-[#f7ab07]">Digital Realities</span>!
           </h4>
           <div>
-            <button className={styles.landBtnAbt + " flex items-center mt-4"}>
+            <button
+              onClick={() => navigate("/abt")}
+              className={styles.landBtnAbt + " flex items-center mt-4"}
+            >
               <span>ABOUT ME &nbsp;</span>
               <span className={styles.landBtnAbtSpan}>
                 <AiOutlineArrowRight />

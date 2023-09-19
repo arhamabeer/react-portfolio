@@ -1,31 +1,130 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ContactFormInput from "./contactFormInput";
+import { resp } from "../config/firebase/_index.js";
 
 import styles from "./component.module.scss";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import Swal from "sweetalert2";
+import { email_regex } from "../constants";
 
 function ContactForm() {
+  const [data, setData] = useState({
+    name: "",
+    email: "",
+    message: "",
+    subject: "",
+  });
+  const [errors, setErrors] = useState({
+    email: false,
+    message: false,
+  });
+
+  useEffect(() => {
+    if (errors.email) {
+      if (email_regex.test(errors.email)) {
+        setErrors((prev) => ({
+          ...prev,
+          email: false,
+        }));
+      } else {
+        setErrors((prev) => ({
+          ...prev,
+          email: true,
+        }));
+      }
+    }
+    if (errors.message) {
+      if (email_regex.test(errors.message)) {
+        setErrors((prev) => ({
+          ...prev,
+          message: false,
+        }));
+      } else {
+        setErrors((prev) => ({
+          ...prev,
+          message: true,
+        }));
+      }
+    }
+  }, [errors]);
+
+  const handleSubmit = async () => {
+    try {
+      resp(data);
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Your message has been sent",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      setData({ ...data, email: "", name: "", message: "", subject: "" });
+    } catch (ex) {
+      console.log("error", ex);
+    }
+  };
   return (
     <div className="my-4">
       <div className="flex my-2 w-full justify-between">
         <div className="w-6/12">
-          <ContactFormInput type={0} placeholder={"Your Name"} />
+          <ContactFormInput
+            type={0}
+            data={data.name}
+            placeholder={"Your Name"}
+            setData={(e) =>
+              setData((prev) => ({
+                ...prev,
+                name: e,
+              }))
+            }
+          />
         </div>
         <div className="ml-3 w-6/12">
-          <ContactFormInput type={0} placeholder={"Your Email"} />
+          <ContactFormInput
+            type={0}
+            data={data.email}
+            placeholder={"Your Email"}
+            setData={(e) =>
+              setData((prev) => ({
+                ...prev,
+                email: e,
+              }))
+            }
+          />
         </div>
       </div>
       <div className="my-4">
-        <ContactFormInput type={0} placeholder={"Your Subject"} />
+        <ContactFormInput
+          type={0}
+          data={data.subject}
+          placeholder={"Your Subject"}
+          setData={(e) =>
+            setData((prev) => ({
+              ...prev,
+              subject: e,
+            }))
+          }
+        />
       </div>
       <div className="my-4">
-        <ContactFormInput type={1} placeholder={"Your Message"} />
+        <ContactFormInput
+          type={1}
+          data={data.message}
+          placeholder={"Your Message"}
+          setData={(e) =>
+            setData((prev) => ({
+              ...prev,
+              message: e,
+            }))
+          }
+        />
       </div>
       <div className="flex justify-center items-center">
         <button
           className={
             styles.landBtnAbt + " flex items-center max-lg:mt-4 max-sm:mt-0"
           }
+          onClick={() => handleSubmit()}
         >
           <span>SEND MESSAGE &nbsp;</span>
           <span className={styles.landBtnAbtSpan}>
