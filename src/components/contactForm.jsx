@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ContactFormInput from "./contactFormInput";
+import { resp } from "../config/firebase/_index.js";
 
 import styles from "./component.module.scss";
 import { AiOutlineArrowRight } from "react-icons/ai";
@@ -14,20 +15,7 @@ function ContactForm() {
   });
   const handleSubmit = async () => {
     try {
-      var { email, message, name, subject } = data;
-      const resp = await fetch(
-        "https://v1.nocodeapi.com/arhamabeer/google_sheets/xFaQponzymHukibi?tabId=Sheet1",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify([
-            [name, email, subject, message, new Date().toLocaleString()],
-          ]),
-        }
-      );
-      await resp.json();
+      resp(data);
       Swal.fire({
         position: "center",
         icon: "success",
