@@ -5,7 +5,10 @@ import { resp } from "../config/firebase/_index.js";
 import styles from "./component.module.scss";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import Swal from "sweetalert2";
-import { email_regex } from "../constants";
+import { email_regex, letter_regex } from "../constants";
+
+const email_ERR = "Invalid email";
+const msg_ERR = "Only letters are allowed";
 
 function ContactForm() {
   const [data, setData] = useState({
@@ -17,37 +20,38 @@ function ContactForm() {
   const [errors, setErrors] = useState({
     email: false,
     message: false,
+    subject: false,
+    name: false,
   });
 
   useEffect(() => {
-    if (errors.email) {
-      if (email_regex.test(errors.email)) {
-        setErrors((prev) => ({
-          ...prev,
-          email: false,
-        }));
-      } else {
-        setErrors((prev) => ({
-          ...prev,
-          email: true,
-        }));
-      }
+    if (email_regex.test(data.email) && data.email !== "") {
+      setErrors((prev) => ({
+        ...prev,
+        email: false,
+      }));
+    } else {
+      setErrors((prev) => ({
+        ...prev,
+        email: true,
+      }));
     }
-    if (errors.message) {
-      if (email_regex.test(errors.message)) {
-        setErrors((prev) => ({
-          ...prev,
-          message: false,
-        }));
-      } else {
-        setErrors((prev) => ({
-          ...prev,
-          message: true,
-        }));
-      }
+    if (letter_regex.test(data.message) && data.message !== "") {
+      setErrors((prev) => ({
+        ...prev,
+        message: false,
+      }));
+    } else {
+      setErrors((prev) => ({
+        ...prev,
+        message: true,
+      }));
     }
-  }, [errors]);
 
+    console.log("errors");
+  }, [data]);
+
+  console.log(errors);
   const handleSubmit = async () => {
     try {
       resp(data);
@@ -78,6 +82,13 @@ function ContactForm() {
               }))
             }
           />
+          <p
+            className={`text-red-500 text-xs pl-2 ${
+              errors.message ? "flex" : "hidden"
+            }`}
+          >
+            *{msg_ERR}
+          </p>
         </div>
         <div className="ml-3 w-6/12">
           <ContactFormInput
@@ -91,6 +102,13 @@ function ContactForm() {
               }))
             }
           />
+          <p
+            className={`text-red-500 text-xs pl-2 ${
+              errors.message ? "flex" : "hidden"
+            }`}
+          >
+            *{email_ERR}
+          </p>
         </div>
       </div>
       <div className="my-4">
@@ -105,6 +123,13 @@ function ContactForm() {
             }))
           }
         />
+        <p
+          className={`text-red-500 text-xs pl-2 ${
+            errors.message ? "flex" : "hidden"
+          }`}
+        >
+          *{msg_ERR}
+        </p>
       </div>
       <div className="my-4">
         <ContactFormInput
@@ -118,6 +143,13 @@ function ContactForm() {
             }))
           }
         />
+        <p
+          className={`text-red-500 text-xs pl-2 ${
+            errors.message ? "flex" : "hidden"
+          }`}
+        >
+          *{msg_ERR}
+        </p>
       </div>
       <div className="flex justify-center items-center">
         <button
