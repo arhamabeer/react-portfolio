@@ -31,8 +31,8 @@ function ContactInfo() {
         Feel free to get in touch with me. I am always open to discussing new
         projects, creative ideas or opportunities to be part of your visions.
       </h1>
-      {contacts.map((item) => (
-        <ContactInfoCard item={item} />
+      {contacts.map((item, i) => (
+        <ContactInfoCard key={i} item={item} />
       ))}
       <div className="flex mt-10">
         <a

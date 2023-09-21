@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import ContactFormInput from "./contactFormInput";
 import { resp } from "../config/firebase/_index.js";
 
@@ -18,53 +18,37 @@ function ContactForm() {
     subject: "",
   });
   const [errors, setErrors] = useState({
-    email: false,
-    message: false,
-    subject: false,
-    name: false,
+    email: true,
+    message: true,
+    subject: true,
+    name: true,
   });
-
-  useEffect(() => {
-    if (email_regex.test(data.email) && data.email !== "") {
-      setErrors((prev) => ({
-        ...prev,
-        email: false,
-      }));
-    } else {
-      setErrors((prev) => ({
-        ...prev,
-        email: true,
-      }));
-    }
-    if (letter_regex.test(data.message) && data.message !== "") {
-      setErrors((prev) => ({
-        ...prev,
-        message: false,
-      }));
-    } else {
-      setErrors((prev) => ({
-        ...prev,
-        message: true,
-      }));
-    }
-
-    console.log("errors");
-  }, [data]);
 
   console.log(errors);
   const handleSubmit = async () => {
-    try {
-      resp(data);
+    let { email, message, name, subject } = errors;
+    if (email || message || !name || !subject) {
+      try {
+        // resp(data);
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Your message has been sent",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        // setData({ ...data, email: "", name: "", message: "", subject: "" });
+      } catch (ex) {
+        console.log("error", ex);
+      }
+    } else {
       Swal.fire({
-        position: "center",
-        icon: "success",
-        title: "Your message has been sent",
+        position: "top-right",
+        icon: "error",
+        title: "Try to submit without errors",
         showConfirmButton: false,
         timer: 1500,
       });
-      setData({ ...data, email: "", name: "", message: "", subject: "" });
-    } catch (ex) {
-      console.log("error", ex);
     }
   };
   return (
@@ -72,6 +56,11 @@ function ContactForm() {
       <div className="flex my-2 w-full justify-between">
         <div className="w-6/12">
           <ContactFormInput
+            blur={(e) => {
+              if (e !== "" && !letter_regex.test(e))
+                setErrors({ ...errors, name: true });
+            }}
+            focus={() => setErrors({ ...errors, name: false })}
             type={0}
             data={data.name}
             placeholder={"Your Name"}
@@ -84,7 +73,7 @@ function ContactForm() {
           />
           <p
             className={`text-red-500 text-xs pl-2 ${
-              errors.message ? "flex" : "hidden"
+              errors.name && data.name !== "" ? "flex" : "hidden"
             }`}
           >
             *{msg_ERR}
@@ -92,6 +81,11 @@ function ContactForm() {
         </div>
         <div className="ml-3 w-6/12">
           <ContactFormInput
+            blur={(e) => {
+              if (e !== "" && !email_regex.test(e))
+                setErrors({ ...errors, email: true });
+            }}
+            focus={() => setErrors({ ...errors, email: false })}
             type={0}
             data={data.email}
             placeholder={"Your Email"}
@@ -104,7 +98,7 @@ function ContactForm() {
           />
           <p
             className={`text-red-500 text-xs pl-2 ${
-              errors.message ? "flex" : "hidden"
+              errors.email && data.email !== "" ? "flex" : "hidden"
             }`}
           >
             *{email_ERR}
@@ -113,8 +107,13 @@ function ContactForm() {
       </div>
       <div className="my-4">
         <ContactFormInput
+          blur={(e) => {
+            if (e !== "" && !letter_regex.test(e))
+              setErrors({ ...errors, subject: true });
+          }}
           type={0}
           data={data.subject}
+          focus={() => setErrors({ ...errors, subject: false })}
           placeholder={"Your Subject"}
           setData={(e) =>
             setData((prev) => ({
@@ -125,7 +124,7 @@ function ContactForm() {
         />
         <p
           className={`text-red-500 text-xs pl-2 ${
-            errors.message ? "flex" : "hidden"
+            errors.subject && data.subject !== "" ? "flex" : "hidden"
           }`}
         >
           *{msg_ERR}
@@ -133,8 +132,13 @@ function ContactForm() {
       </div>
       <div className="my-4">
         <ContactFormInput
+          blur={(e) => {
+            if (e !== "" && !letter_regex.test(e))
+              setErrors({ ...errors, message: true });
+          }}
           type={1}
           data={data.message}
+          focus={() => setErrors({ ...errors, message: false })}
           placeholder={"Your Message"}
           setData={(e) =>
             setData((prev) => ({
@@ -145,7 +149,7 @@ function ContactForm() {
         />
         <p
           className={`text-red-500 text-xs pl-2 ${
-            errors.message ? "flex" : "hidden"
+            errors.message && data.message !== "" ? "flex" : "hidden"
           }`}
         >
           *{msg_ERR}

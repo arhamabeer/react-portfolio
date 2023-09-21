@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./component.module.scss";
 
-function ContactFormInput({ placeholder, data, type, setData }) {
+function ContactFormInput({ placeholder, data, type, setData, blur, focus }) {
   return (
     <div>
       {type ? (
@@ -11,6 +11,8 @@ function ContactFormInput({ placeholder, data, type, setData }) {
           placeholder={placeholder}
           onChange={(e) => setData(e.target.value)}
           value={data}
+          onBlur={(e) => blur(e.target.value)}
+          onFocus={() => focus()}
           className={
             "bg-slate-500 w-full  rounded-2xl p-2 " + styles.contactFormInout
           }
@@ -23,6 +25,8 @@ function ContactFormInput({ placeholder, data, type, setData }) {
           }
           onChange={(e) => setData(e.target.value)}
           type="text"
+          onBlur={(e) => blur(e.target.value)}
+          onFocus={() => focus()}
           value={data}
           placeholder={placeholder}
         />
