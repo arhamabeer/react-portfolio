@@ -24,22 +24,46 @@ function ContactForm() {
     name: true,
   });
 
-  console.log(errors);
   const handleSubmit = async () => {
     let { email, message, name, subject } = errors;
-    if (email || message || !name || !subject) {
+    if (
+      !email &&
+      !message &&
+      !name &&
+      !subject &&
+      data.email !== "" &&
+      data.name !== "" &&
+      data.subject !== "" &&
+      data.message !== ""
+    ) {
       try {
-        // resp(data);
+        const _res = await resp(data);
+        if (_res === 200) {
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Your message has been sent",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+          setData({ ...data, email: "", name: "", message: "", subject: "" });
+        } else {
+          Swal.fire({
+            position: "center",
+            icon: "error",
+            title:
+              "Failed to send message. Try to send mail directly to my email.",
+            showConfirmButton: true,
+          });
+        }
+      } catch (ex) {
         Swal.fire({
           position: "center",
-          icon: "success",
-          title: "Your message has been sent",
-          showConfirmButton: false,
-          timer: 1500,
+          icon: "error",
+          title:
+            "Failed to send message. Try to send mail directly to my email.",
+          showConfirmButton: true,
         });
-        // setData({ ...data, email: "", name: "", message: "", subject: "" });
-      } catch (ex) {
-        console.log("error", ex);
       }
     } else {
       Swal.fire({
