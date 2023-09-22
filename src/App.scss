@@ -1,11 +1,24 @@
 @import "./scss/variables.scss";
-
 .projectCard {
+  .projectCardInner {
+    transition: transform 1s ease-in-out, background-color 0.3s ease-in-out;
+    &Div {
+    }
+    &Det {
+      transform: translateY(0);
+      // background-color: rgba(0, 0, 0, 0.6);
+    }
+  }
+
   &:hover {
     .projectCardInner {
-      display: block;
-      transform: translateY(30);
-      transition: transform 2.3s ease;
+      &Div {
+        background-color: rgba(0, 0, 0, 0.6);
+      }
+      &Det {
+        display: flex;
+        transform: translateY(50);
+      }
     }
   }
 }
