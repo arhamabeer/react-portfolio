@@ -19,22 +19,15 @@ function PersonalInfo({ aboutCardsData }) {
                 <span className="font-medium text-white">Arham Abeer</span>
               </h4>
               <h4 className="text-sm my-3">
-                Age: <span className="font-medium text-white">23 Years</span>
-              </h4>
-              <h4 className="text-sm my-3">
-                Nationality:{" "}
-                <span className="font-medium text-white">Pakistani</span>
-              </h4>
-              <h4 className="text-sm my-3">
                 Experience:{" "}
                 <span className="font-medium text-white">2+ Years</span>
               </h4>
-            </div>
-            <div>
               <h4 className="text-sm my-3">
                 Open to Work:{" "}
                 <span className="font-medium text-green-600">Yes</span>
               </h4>
+            </div>
+            <div>
               <h4 className="text-sm my-3">
                 Email:{" "}
                 <span className="font-medium text-white">
@@ -56,7 +49,7 @@ function PersonalInfo({ aboutCardsData }) {
         </div>
         <div className="w-[50%] max-sm:w-full flex flex-wrap justify-between items-center max-sm:px-2">
           {aboutCardsData.map((item, ind) => (
-            <AboutCards numbers={item.numbers} stat={item.stat} />
+            <AboutCards key={ind} numbers={item.numbers} stat={item.stat} />
           ))}
         </div>
       </div>
