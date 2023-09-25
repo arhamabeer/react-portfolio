@@ -47,7 +47,7 @@ function PersonalInfo({ aboutCardsData }) {
             </div>
           </div>
         </div>
-        <div className="w-[50%] max-sm:w-full flex flex-wrap justify-between items-center max-sm:px-2">
+        <div className="w-[50%] max-md:w-full flex flex-wrap justify-between items-center max-sm:px-2">
           {aboutCardsData.map((item, ind) => (
             <AboutCards key={ind} numbers={item.numbers} stat={item.stat} />
           ))}

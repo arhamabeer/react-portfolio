@@ -5,7 +5,7 @@ function AboutCards({ numbers, stat }) {
   return (
     <div
       className={
-        "w-[45%] py-3 px-10 m-2 border rounded-md max-sm:h-48 max-sm:px-3 break-all " +
+        "w-[45%] py-3 px-10 m-2 border rounded-md max-sm:h-48 max-sm:px-3 max-md:w-full max-sm:w-[45%] break-all " +
         styles.abtCard
       }
     >
