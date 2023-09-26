@@ -12,32 +12,32 @@ function LandingPage() {
 
   return (
     <div>
-      <div className="overflow-hidden max-sm:flex max-sm:flex-col h-[100vh]">
-        <div className={"max-sm:hidden " + styles.curveBG} />
+      <div className="overflow-hidden max-md:flex max-md:flex-col h-[100vh]">
+        <div className={"max-md:hidden " + styles.curveBG} />
         <div
           className={
             styles.landingPic +
-            " fixed w-2/6 max-sm: flex self-center //max-sm:hidden"
+            " fixed w-2/6 max-md: flex self-center max-md:p-4"
           }
         >
           <img src={aaa} alt="avatarphoto" className="h-full" />
         </div>
-        <div className="relative top-28 left-[45%] text-white max-sm:left-0 max-sm:items-center max-sm:flex max-sm:flex-col ">
+        <div className="relative top-28 left-[45%] max-md:top-14 text-white max-md:left-0 max-md:items-center max-md:flex max-md:flex-col ">
           <span className="ml-[-40px] font-black  text-3xl hidden text-[#f74b07]">
             {open}
           </span>
-          <h1 className=" font-black text-[#f7ab07] text-5xl max-sm:text-3xl">
+          <h1 className=" font-black text-[#f7ab07] text-5xl max-md:text-3xl">
             I'M ARHAM ABEER.
           </h1>
-          <h1 className="my-2  text-4xl max-sm:text-2xl font-black">
+          <h1 className="my-2  text-4xl max-md:text-2xl font-black">
             SOFTWARE ENGINEER
           </h1>
           <span className="ml-[-40px] text-[#f74b07] font-black  text-3xl hidden ">
             {close}
           </span>
 
-          <h4 className="text-xl max-sm:text-base mt-3 max-sm:text-center">
-            <span className="text-[#f7ab07] font-bold text-2xl max-sm:text-lg">
+          <h4 className="text-xl max-md:text-base mt-3 max-md:text-center">
+            <span className="text-[#f7ab07] font-bold text-2xl max-md:text-lg">
               Coding Maestro!
             </span>
             <br />

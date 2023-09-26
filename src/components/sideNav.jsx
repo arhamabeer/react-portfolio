@@ -10,50 +10,50 @@ function SideNav({ current }) {
   const navigate = useNavigate();
 
   return (
-    <div className="flex fixed top-0 z-50 right-10 m-auto bottom-0 h-fit flex-col  max-sm:rounded-t-3xl  max-sm:rounded-tr-3xl max-sm:sticky max-sm:top-auto max-sm:bottom-0 max-sm:flex-row max-sm:right-auto max-sm:justify-evenly max-sm:w-full max-sm:bg-bgGray">
+    <div className="flex fixed top-0 z-50 right-10 max-lg:right-4 m-auto bottom-0 h-fit flex-col  max-md:rounded-t-3xl  max-md:rounded-tr-3xl max-md:sticky max-md:top-auto max-md:bottom-0 max-md:flex-row max-md:right-auto max-md:justify-evenly max-md:w-full max-md:bg-bgGray">
       <button
         onClick={() => navigate("/")}
         className={
           current === 0
             ? styles.landNavBtn + " bg-[#ffb400]"
-            : styles.landNavBtn + " bg-[#2b2a2a] max-sm:bg-[#0f0f0f]"
+            : styles.landNavBtn + " bg-[#2b2a2a] max-md:bg-[#0f0f0f]"
         }
       >
         <AiFillHome size={20} className="w-full" color="#fff" />{" "}
-        <h1 className="max-sm:hidden">Home</h1>
+        <h1 className="max-md:hidden">Home</h1>
       </button>
       <button
         onClick={() => navigate("/abt")}
         className={
           current === 1
             ? styles.landNavBtn + " bg-[#ffb400]"
-            : styles.landNavBtn + " bg-[#2b2a2a] max-sm:bg-[#0f0f0f]"
+            : styles.landNavBtn + " bg-[#2b2a2a] max-md:bg-[#0f0f0f]"
         }
       >
         <FaUserAlt size={20} className="w-full" color="#fff" />{" "}
-        <h1 className="max-sm:hidden"> About</h1>
+        <h1 className="max-md:hidden"> About</h1>
       </button>
       <button
         onClick={() => navigate("/projects")}
         className={
           current === 2
             ? styles.landNavBtn + " bg-[#ffb400]"
-            : styles.landNavBtn + " bg-[#2b2a2a] max-sm:bg-[#0f0f0f]"
+            : styles.landNavBtn + " bg-[#2b2a2a] max-md:bg-[#0f0f0f]"
         }
       >
         <BsCollectionFill size={20} className="w-full" color="#fff" />{" "}
-        <h1 className="max-sm:hidden"> Projects</h1>
+        <h1 className="max-md:hidden"> Projects</h1>
       </button>
       <button
         onClick={() => navigate("/contact")}
         className={
           current === 3
             ? styles.landNavBtn + " bg-[#ffb400]"
-            : styles.landNavBtn + " bg-[#2b2a2a] max-sm:bg-[#0f0f0f]"
+            : styles.landNavBtn + " bg-[#2b2a2a] max-md:bg-[#0f0f0f]"
         }
       >
         <MdEmail size={20} className="w-full" color="#fff" />{" "}
-        <h1 className="max-sm:hidden">Get in Touch</h1>
+        <h1 className="max-md:hidden">Get in Touch</h1>
       </button>
     </div>
   );
