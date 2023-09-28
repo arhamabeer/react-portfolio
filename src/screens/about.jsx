@@ -8,7 +8,7 @@ import { aboutCardsData } from "../projects";
 
 function About() {
   return (
-    <div className="h-auto flex flex-col">
+    <div className="h-auto flex flex-col max-lg:mb-14">
       <PersonalInfo aboutCardsData={aboutCardsData} />
       <hr className={styles.seperator} />
       <Skills />
