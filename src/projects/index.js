@@ -105,5 +105,87 @@ export const myProjects = [
   },
 ];
 
+export const aboutCardsData = [
+  { numbers: `2+`, stat: "YEARS OF EXPERIENCE" },
+  { numbers: `25+`, stat: "COMPLETED PROJECTS " },
+  { numbers: `5+`, stat: "HAPPY CLIENTS & COMPANIES" },
+  { numbers: `10+`, stat: "RECOMMENDATIONS" },
+];
+export const skills = [
+  {
+    skill: "HTML",
+    percent: 0.75,
+  },
+  {
+    skill: "CSS",
+    percent: 0.7,
+  },
+  {
+    skill: "SCSS",
+    percent: 0.66,
+  },
+  {
+    skill: "JAVASCRIPT",
+    percent: 0.64,
+  },
+  {
+    skill: "TYPESCRIPT",
+    percent: 0.6,
+  },
+  {
+    skill: "REACT",
+    percent: 0.73,
+  },
+  {
+    skill: "REACT NATIVE",
+    percent: 0.7,
+  },
+  {
+    skill: "C#",
+    percent: 0.4,
+  },
+  {
+    skill: ".NET CORE",
+    percent: 0.4,
+  },
+  {
+    skill: "NODE",
+    percent: 0.25,
+  },
+];
+
 export const __DANGER__VIRUS_WILL_HACK_YOUR_SYSTEM__XZQYPBMJDX__ =
   "https://v1.nocodeapi.com/arhamabeer/google_sheets/xFaQponzymHukibi?tabId=Sheet1";
+
+export const edu = [
+  {
+    type: 1,
+    duration: "2019-2022",
+    desc: "I've completed my Bachelors Degree from here. I've also developed a social platforms for students and teachers to communicate with each other: CS-TALKS (fuuastcstalks.com)",
+    company: "Federal Urdu University, Karachi",
+    position: "BS Computer Science",
+  },
+];
+export const exp = [
+  {
+    type: 0,
+    duration: "2021-2022",
+    desc: "Worked on a Web and Mobile projects. Mobile project was for booking a meeting for a workplace. It was like a online meeting scheduler. Web project was a online hiring platform like deel. ",
+    company: "Work Hall",
+    position: "Software Engineer",
+  },
+  {
+    type: 0,
+    duration: "2022",
+    desc: "Here I worked on different Web Apps of WEB3, Crypto trading, NFTs selling and others.",
+    company: "Ashtar Global Solutions",
+    position: "Associate Software Engineer",
+  },
+  {
+    type: 0,
+    duration: "2022-present",
+    desc: "I've worked on a Vending Machine Software and it's mobile app to pre-reserve meals.",
+    company: "BrainCrop",
+    position: "Software Engineer",
+  },
+];
