@@ -11,14 +11,14 @@
     }
     &Det {
       transform: translateY(0);
-      // background-color: rgba(0, 0, 0, 0.6);
+      // background-color: rgba(0, 0, 0, 0.8);
     }
   }
 
   &:hover {
     .projectCardInner {
       &Div {
-        background-color: rgba(0, 0, 0, 0.6);
+        background-color: rgba(0, 0, 0, 0.8);
       }
       &Name {
         display: block;
