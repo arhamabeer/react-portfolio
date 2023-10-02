@@ -2,19 +2,27 @@
 
 .projectCard {
   .projectCardInner {
-    transition: transform 1s ease-in-out, background-color 0.3s ease-in-out;
+    transition: transform 1s ease-in, background-color 0.3s ease-in;
     &Div {
+    }
+    &Name {
+      display: none;
+      transform: translateY(0);
     }
     &Det {
       transform: translateY(0);
-      // background-color: rgba(0, 0, 0, 0.6);
+      // background-color: rgba(0, 0, 0, 0.8);
     }
   }
 
   &:hover {
     .projectCardInner {
       &Div {
-        background-color: rgba(0, 0, 0, 0.6);
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+      &Name {
+        display: block;
+        transform: translateY(50);
       }
       &Det {
         display: flex;

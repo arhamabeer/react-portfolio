@@ -1,35 +1,38 @@
+import { cs1, ibm, port, ibdesk } from "../assets/index";
+
 export const myProjects = [
   {
-    img: "https://media.istockphoto.com/id/1253862403/vector/80s-synthwave-styled-landscape-with-blue-grid-mountains-and-sun-over-canyon.jpg?s=612x612&w=0&k=20&c=2d9zWZ_Q97QbsRa_9N8FURlWWnJ_QxF7RAtHKM8Ijfo=",
+    img: port,
     type: "Web Application",
     for: "Self",
     name: "Portfolio",
-    tech: "React, SCSS, Tailwind",
+    tech: "React, JavaScript, SCSS, Tailwind CSS",
     url: "aaa-portfolio.web.app",
+    desc: "Experience my portfolio project, a stunning web application crafted completely with the power of React JS. Explore my professional journey, showcased through an intuitive and visually appealing interface. Discover a seamless user experience, coupled with responsive design, making it accessible across all devices. Dive into a world of creativity and innovation, where my skills and expertise shine through this showcase of my work.",
   },
   {
-    img: "https://static.vecteezy.com/system/resources/previews/006/076/790/original/10-abstract-modern-attractive-black-and-red-background-free-vector.jpg",
+    img: cs1,
     type: "Web Application",
     for: "Federal Urdu University, Pakistan",
     name: "CS-Talks",
-    tech: "React, JavaScript, SCSS, PHP",
+    tech: "React, JavaScript, SCSS, PHP, Material, Bootstrap",
     url: "fuuastcstalks.com",
   },
   {
-    img: "https://images.pond5.com/attractive-background-footage-086592526_prevstill.jpeg",
+    img: ibdesk,
     type: "Desktop Application",
     for: "Braincrop",
     name: "IceBox Pantry",
-    tech: "React, Electron JS, JavaScript, ContextAPI",
-    url: "",
+    tech: "React, Electron JS, JavaScript, ContextAPI, NodeJS",
+    url: "https://iceboxpantry.com/",
   },
   {
-    img: "https://png.pngtree.com/thumb_back/fh260/background/20190521/pngtree-3d-neon-light-abstract-background-image_111005.jpg",
+    img: ibm,
     type: "Mobile Application",
     for: "Braincrop",
     name: "IceBox Pantry",
-    tech: "React Native, TypeScript, Tailwind, Redux",
-    url: "",
+    tech: "React Native, TypeScript, Tailwind, Redux Toolkit",
+    url: "https://play.google.com/store/apps/details?id=com.iceboxpantrymobileapp&hl=en&gl=US&pli=1",
   },
   {
     img: "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/129325364/original/afaddcb9d7dfaaf5bff7ef04101935814665ac16/design-an-attractive-background-for-your-website.png",
@@ -105,5 +108,87 @@ export const myProjects = [
   },
 ];
 
+export const aboutCardsData = [
+  { numbers: `2+`, stat: "YEARS OF EXPERIENCE" },
+  { numbers: `25+`, stat: "COMPLETED PROJECTS " },
+  { numbers: `5+`, stat: "HAPPY CLIENTS & COMPANIES" },
+  { numbers: `10+`, stat: "RECOMMENDATIONS" },
+];
+export const skills = [
+  {
+    skill: "HTML",
+    percent: 0.75,
+  },
+  {
+    skill: "CSS",
+    percent: 0.7,
+  },
+  {
+    skill: "SCSS",
+    percent: 0.66,
+  },
+  {
+    skill: "JAVASCRIPT",
+    percent: 0.64,
+  },
+  {
+    skill: "TYPESCRIPT",
+    percent: 0.6,
+  },
+  {
+    skill: "REACT",
+    percent: 0.73,
+  },
+  {
+    skill: "REACT NATIVE",
+    percent: 0.7,
+  },
+  {
+    skill: "C#",
+    percent: 0.4,
+  },
+  {
+    skill: ".NET CORE",
+    percent: 0.4,
+  },
+  {
+    skill: "NODE",
+    percent: 0.25,
+  },
+];
+
 export const __DANGER__VIRUS_WILL_HACK_YOUR_SYSTEM__XZQYPBMJDX__ =
   "https://v1.nocodeapi.com/arhamabeer/google_sheets/xFaQponzymHukibi?tabId=Sheet1";
+
+export const edu = [
+  {
+    type: 1,
+    duration: "2019-2022",
+    desc: "I've completed my Bachelors Degree from here. I've also developed a social platforms for students and teachers to communicate with each other: CS-TALKS (fuuastcstalks.com)",
+    company: "Federal Urdu University, Karachi",
+    position: "BS Computer Science",
+  },
+];
+export const exp = [
+  {
+    type: 0,
+    duration: "2021-2022",
+    desc: "Worked on a Web and Mobile projects. Mobile project was for booking a meeting for a workplace. It was like a online meeting scheduler. Web project was a online hiring platform like deel. ",
+    company: "Work Hall",
+    position: "Software Engineer",
+  },
+  {
+    type: 0,
+    duration: "2022",
+    desc: "Here I worked on different Web Apps of WEB3, Crypto trading, NFTs selling and others.",
+    company: "Ashtar Global Solutions",
+    position: "Associate Software Engineer",
+  },
+  {
+    type: 0,
+    duration: "2022-present",
+    desc: "I've worked on a Vending Machine Software and it's mobile app to pre-reserve meals.",
+    company: "BrainCrop",
+    position: "Software Engineer",
+  },
+];

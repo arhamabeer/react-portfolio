@@ -10,7 +10,9 @@ function SideNav({ current }) {
   const navigate = useNavigate();
 
   return (
-    <div className="flex fixed top-0 z-50 right-10 max-lg:right-4 m-auto bottom-0 h-fit flex-col max-md:m-0 max-md:rounded-t-3xl max-md:left-0 max-md:rounded-tr-3xl max-md:bottom-0 max-md:flex-row max-md:right-0 max-md:justify-evenly max-md:w-full max-md:bg-bgGray topUnset">
+    <div
+      className={`flex fixed top-0 z-50 right-10 max-lg:right-4 m-auto bottom-0 h-fit flex-col max-md:m-0 max-md:rounded-t-3xl max-md:left-0 max-md:rounded-tr-3xl max-md:bottom-0 max-md:flex-row max-md:right-0 max-md:justify-evenly max-md:w-full max-md:bg-bgGray topUnset ${styles.sideNav}`}
+    >
       <button
         onClick={() => navigate("/")}
         className={

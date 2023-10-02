@@ -11,11 +11,12 @@ function Projects() {
     name: "",
     tech: "",
     url: "",
+    desc: "",
   });
 
   return (
     <div
-      className={`h-[100vh] flex flex-col z-10 ${
+      className={`h-auto flex flex-col z-10 max-lg:mb-14 ${
         modalData.open && "overflow-hidden"
       }`}
     >
@@ -25,11 +26,11 @@ function Projects() {
         </h1>
       </div>
 
-      <div className="flex justify-center items-center text-white flex-wrap ">
-        {myProjects.map((proj) => (
+      <div className="flex justify-center items-center text-white flex-wrap  ">
+        {myProjects.map((proj, ind) => (
           <ProjectCard
             project={proj}
-            key={proj.name}
+            key={proj.name + ind}
             setModalData={(e) => {
               setModalData({
                 open: true,
@@ -37,6 +38,7 @@ function Projects() {
                 name: e.name,
                 tech: e.tech,
                 url: e.url,
+                desc: e.desc,
               });
             }}
           />

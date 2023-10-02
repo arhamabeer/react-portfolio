@@ -14,7 +14,7 @@ function ProjectCard({ project, setModalData }) {
       onClick={() => setModalData(project)}
     >
       <div className="m-auto h-full flex flex-col rounded-2xl text-center relative projectCardInner projectCardInnerDiv w-full justify-center">
-        <div>
+        <div className="projectCardInnerName">
           <h1 className="text-xl my-2">{type}</h1>
           <h1 className="text-2xl font-bold my-2">{name}</h1>
         </div>
