@@ -1,4 +1,4 @@
-import { cs1, cs2, cs3, ibm, port } from "../assets/index";
+import { cs1, ibm, port, ibdesk } from "../assets/index";
 
 export const myProjects = [
   {
@@ -6,23 +6,24 @@ export const myProjects = [
     type: "Web Application",
     for: "Self",
     name: "Portfolio",
-    tech: "React, SCSS, Tailwind",
+    tech: "React, JavaScript, SCSS, Tailwind CSS",
     url: "aaa-portfolio.web.app",
+    desc: "Experience my portfolio project, a stunning web application crafted completely with the power of React JS. Explore my professional journey, showcased through an intuitive and visually appealing interface. Discover a seamless user experience, coupled with responsive design, making it accessible across all devices. Dive into a world of creativity and innovation, where my skills and expertise shine through this showcase of my work.",
   },
   {
     img: cs1,
     type: "Web Application",
     for: "Federal Urdu University, Pakistan",
     name: "CS-Talks",
-    tech: "React, JavaScript, SCSS, PHP",
+    tech: "React, JavaScript, SCSS, PHP, Material, Bootstrap",
     url: "fuuastcstalks.com",
   },
   {
-    img: "https://images.pond5.com/attractive-background-footage-086592526_prevstill.jpeg",
+    img: ibdesk,
     type: "Desktop Application",
     for: "Braincrop",
     name: "IceBox Pantry",
-    tech: "React, Electron JS, JavaScript, ContextAPI",
+    tech: "React, Electron JS, JavaScript, ContextAPI, NodeJS",
     url: "https://iceboxpantry.com/",
   },
   {
@@ -30,7 +31,7 @@ export const myProjects = [
     type: "Mobile Application",
     for: "Braincrop",
     name: "IceBox Pantry",
-    tech: "React Native, TypeScript, Tailwind, Redux",
+    tech: "React Native, TypeScript, Tailwind, Redux Toolkit",
     url: "https://play.google.com/store/apps/details?id=com.iceboxpantrymobileapp&hl=en&gl=US&pli=1",
   },
   {

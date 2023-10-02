@@ -6,6 +6,8 @@ import { MdEmail } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
 function ProjectModal({ modalData, hideModal }) {
+  console.log(modalData);
+
   const navigate = useNavigate();
   return (
     <div className="projModal flex items-center absolute h-[100vh] flex-col max-[768px]:justify-center bg-projModalBg w-full p-[4%] text-white z-50">
@@ -24,10 +26,9 @@ function ProjectModal({ modalData, hideModal }) {
             >
               <h1 className="font-bold text-2xl">{modalData.name}</h1>
               <h4 className="text-xs">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-                incidunt nisi veniam dolorem dolorum eveniet, corporis
-                obcaecati. Ipsum, illo perferendis hic blanditiis eligendi illum
-                dolores, adipisci saepe distinctio, odio sequi!
+                {modalData.desc
+                  ? modalData.desc
+                  : "Description not available right now."}
               </h4>
               <h2 className="font-bold text-xl mt-2">Technologies</h2>
               <h4 className="text-xs">{modalData.tech}</h4>

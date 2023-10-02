@@ -11,6 +11,7 @@ function Projects() {
     name: "",
     tech: "",
     url: "",
+    desc: "",
   });
 
   return (
@@ -26,10 +27,10 @@ function Projects() {
       </div>
 
       <div className="flex justify-center items-center text-white flex-wrap  ">
-        {myProjects.map((proj) => (
+        {myProjects.map((proj, ind) => (
           <ProjectCard
             project={proj}
-            key={proj.name}
+            key={proj.name + ind}
             setModalData={(e) => {
               setModalData({
                 open: true,
@@ -37,6 +38,7 @@ function Projects() {
                 name: e.name,
                 tech: e.tech,
                 url: e.url,
+                desc: e.desc,
               });
             }}
           />
