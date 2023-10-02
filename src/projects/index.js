@@ -1,6 +1,8 @@
+import { cs1, cs2, cs3, ibm, port } from "../assets/index";
+
 export const myProjects = [
   {
-    img: "https://media.istockphoto.com/id/1253862403/vector/80s-synthwave-styled-landscape-with-blue-grid-mountains-and-sun-over-canyon.jpg?s=612x612&w=0&k=20&c=2d9zWZ_Q97QbsRa_9N8FURlWWnJ_QxF7RAtHKM8Ijfo=",
+    img: port,
     type: "Web Application",
     for: "Self",
     name: "Portfolio",
@@ -8,7 +10,7 @@ export const myProjects = [
     url: "aaa-portfolio.web.app",
   },
   {
-    img: "https://static.vecteezy.com/system/resources/previews/006/076/790/original/10-abstract-modern-attractive-black-and-red-background-free-vector.jpg",
+    img: cs1,
     type: "Web Application",
     for: "Federal Urdu University, Pakistan",
     name: "CS-Talks",
@@ -21,15 +23,15 @@ export const myProjects = [
     for: "Braincrop",
     name: "IceBox Pantry",
     tech: "React, Electron JS, JavaScript, ContextAPI",
-    url: "",
+    url: "https://iceboxpantry.com/",
   },
   {
-    img: "https://png.pngtree.com/thumb_back/fh260/background/20190521/pngtree-3d-neon-light-abstract-background-image_111005.jpg",
+    img: ibm,
     type: "Mobile Application",
     for: "Braincrop",
     name: "IceBox Pantry",
     tech: "React Native, TypeScript, Tailwind, Redux",
-    url: "",
+    url: "https://play.google.com/store/apps/details?id=com.iceboxpantrymobileapp&hl=en&gl=US&pli=1",
   },
   {
     img: "https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/129325364/original/afaddcb9d7dfaaf5bff7ef04101935814665ac16/design-an-attractive-background-for-your-website.png",
