@@ -1,4 +1,4 @@
-import { cs1, ibm, port, ibdesk } from "../assets/index";
+import { cs1, ibm, port, ibdesk, soh, soh1 } from "../assets/index";
 
 export const myProjects = [
   {
@@ -15,7 +15,7 @@ export const myProjects = [
     type: "Web Application",
     for: "Federal Urdu University, Pakistan",
     name: "CS-Talks",
-    tech: "React, JavaScript, SCSS, PHP, Material, Bootstrap",
+    tech: "React, JavaScript, SCSS, PHP, SQL, Material, Bootstrap",
     url: "fuuastcstalks.com",
   },
   {
@@ -31,7 +31,7 @@ export const myProjects = [
     type: "Mobile Application",
     for: "Braincrop",
     name: "IceBox Pantry",
-    tech: "React Native, TypeScript, Tailwind, Redux Toolkit",
+    tech: "React Native, TypeScript, Firebase, Tailwind, Redux Toolkit",
     url: "https://play.google.com/store/apps/details?id=com.iceboxpantrymobileapp&hl=en&gl=US&pli=1",
   },
   {
@@ -46,9 +46,9 @@ export const myProjects = [
     img: "https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg",
     type: "Web Application",
     for: "Self",
-    name: "Employee Management System",
-    tech: ".NET Core, C#, EFC, SQL-Server",
-    url: "",
+    name: "New-Agent Gamesoft",
+    tech: "React, JavaScript, Bootstrap",
+    url: "https://newagent-nippkh.web.app/",
   },
   {
     img: "https://png.pngtree.com/thumb_back/fh260/background/20201026/pngtree-futuristic-shape-abstract-background-chemistry-technology-concept-for-website-image_438818.jpg",
@@ -75,6 +75,14 @@ export const myProjects = [
     url: "",
   },
   {
+    img: soh1,
+    type: "Web Application",
+    for: "AGS",
+    name: "Soul of Hidama",
+    tech: "React, TypeScript, Wallet Adapter",
+    url: "https://soulofhidama.xyz/",
+  },
+  {
     img: "https://png.pngtree.com/thumb_back/fh260/background/20201123/pngtree-digital-technology-low-poly-design-image_499020.jpg",
     type: "Server Application",
     for: "AGS",
@@ -83,20 +91,12 @@ export const myProjects = [
     url: "",
   },
   {
-    img: "https://www.pixelstalk.net/wp-content/uploads/images6/Aesthetic-Neon-Wallpaper-City.jpg",
-    type: "Mobile Application",
-    for: "Self",
-    name: "Weather Mobile App",
-    tech: "React Native, JavaScript",
-    url: "",
-  },
-  {
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB7jv1qIxtYApS6O4rPw9u_O36YJTgJJv_8c3PkSXiCg06JOAO7Fd7as8agpw_8B8JM90&usqp=CAU",
+    img: soh,
     type: "Web Application",
-    for: "Self",
-    name: "COVID-19 Tracker",
-    tech: "React, JavaScript",
-    url: "",
+    for: "AGS",
+    name: "Soul of Hidama Staking",
+    tech: "React, TypeScript, Material, SCSS, Bootstrap, Wallet Adapter",
+    url: "https://soulofhidama-staking.vercel.app/",
   },
   {
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQri_rcUUg49ezCaSJA9zHKAJS8nINTZLS1mpwuSfhTnKOqtt6nPlDz1AS2KoypQiNxNYM&usqp=CAU",
