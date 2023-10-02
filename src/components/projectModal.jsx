@@ -48,7 +48,7 @@ function ProjectModal({ modalData, hideModal }) {
           >
             <span>VISIT</span>
             <span
-              className={styles.landBtnAbtSpan}
+              className={styles.landBtnAbtSpan + " " + styles.projModalBtn}
               style={{ width: 45, height: 45 }}
             >
               <RxExternalLink />
@@ -64,7 +64,12 @@ function ProjectModal({ modalData, hideModal }) {
           >
             <span>CONTACT ME</span>
             <span
-              className={`${styles.landBtnAbtSpan + " max-[768px]:text-xs"}`}
+              className={`${
+                styles.landBtnAbtSpan +
+                " " +
+                styles.projModalBtn +
+                " max-[768px]:text-xs"
+              } `}
               style={{ width: 45, height: 45 }}
             >
               <MdEmail />
