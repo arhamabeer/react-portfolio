@@ -10,7 +10,7 @@ function ProjectModal({ modalData, hideModal }) {
 
   const navigate = useNavigate();
   return (
-    <div className="projModal flex items-center absolute h-[100vh] flex-col max-[768px]:justify-center bg-projModalBg w-full p-[4%] text-white z-50">
+    <div className="projModal flex items-center absolute h-[100vh] flex-col max-[768px]:justify-center bg-projModalBg w-full p-[4%]  text-white z-500">
       <div className="bg-[#111111] h-full max-[768px]:h-[80%] w-4/5 max-[768px]:w-full rounded-lg modalShadow">
         <div className="flex w-full justify-end mb-3">
           <ImCross

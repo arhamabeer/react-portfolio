@@ -1,4 +1,4 @@
-import { cs1, ibm, port, ibdesk, soh, soh1 } from "../assets/index";
+import { cs1, ibm, port, ibdesk, soh, soh1, gamesoft } from "../assets/index";
 
 export const myProjects = [
   {
@@ -43,7 +43,7 @@ export const myProjects = [
     url: "",
   },
   {
-    img: "https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg",
+    img: gamesoft,
     type: "Web Application",
     for: "Self",
     name: "New-Agent Gamesoft",
@@ -64,14 +64,6 @@ export const myProjects = [
     for: "Self",
     name: "Copment",
     tech: "React, TypeScript, Redux, Node, Express, MongoDB",
-    url: "",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1511447333015-45b65e60f6d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80",
-    type: "Server Application",
-    for: "AGS",
-    name: "NFT Inventory Management",
-    tech: "TypeScript, Node, Express, MongoDB",
     url: "",
   },
   {
