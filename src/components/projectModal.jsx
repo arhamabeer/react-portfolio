@@ -28,6 +28,8 @@ function ProjectModal({ modalData, hideModal }) {
               <h4 className="text-xs">
                 {modalData.desc
                   ? modalData.desc
+                      .split("\n")
+                      .map((paragraph, index) => <p key={index}>{paragraph}</p>)
                   : "Description not available right now."}
               </h4>
               <h2 className="font-bold text-xl mt-2">Technologies</h2>

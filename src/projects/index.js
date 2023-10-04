@@ -17,6 +17,25 @@ export const myProjects = [
     name: "CS-Talks",
     tech: "React, JavaScript, SCSS, PHP, SQL, Material, Bootstrap",
     url: "fuuastcstalks.com",
+    desc: `
+    Introducing "CS-Talks" a dedicated social web platform tailored exclusively for university students and educators, designed to create a vibrant and collaborative online ecosystem for the academic community. CS-Talks serves as an interactive digital hub where students, teachers, alumni, and professors can come together to build meaningful connections, enrich their learning experiences, and stay updated on the latest developments within their academic circles.
+  \n  
+    CS-Talks offers a multitude of features to facilitate engagement and collaboration. Students and teachers alike can establish profiles, expand their networks, and cultivate relationships that extend beyond their immediate social circles. This fosters a sense of community and camaraderie, providing an invaluable support system for all members.
+  \n  
+    Within the platform, professors can effortlessly establish private and public virtual classrooms for each of their courses. These dedicated spaces serve as a hub for sharing course materials, assigning projects and homework, and fostering discussions. Students can actively collaborate with peers, engaging in academic conversations within these purpose-built digital classrooms.
+  \n  
+    Furthermore, CS-Talks simplifies the process of managing assignments and projects. Educators can seamlessly assign tasks to their students through the platform, enabling students to submit their work and receive feedback and grades directly within the system. This streamlines the grading process and enhances communication between teachers and students.
+  \n  
+    The platform also facilitates the sharing of university-related events, workshops, seminars, and extracurricular activities, keeping members informed and engaged in campus life. Users can create event pages, RSVP, and stay updated on upcoming events, contributing to the development of a dynamic campus community.
+  \n  
+    In addition to event sharing, CS-Talks encourages knowledge dissemination through blogging and article publication. Members can publish articles on various academic and non-academic topics, creating a space for the exchange of ideas and expertise. This feature also serves as a platform for individuals to showcase their thoughts and talents.
+  \n  
+    Multimedia sharing is another integral aspect of CS-Talks. Users can effortlessly share photos, videos, and other multimedia content within their feeds or within specific interest groups, enabling them to visually document their university experiences and express their creativity.
+  \n  
+    Alumni engagement is facilitated as well, with former students having the opportunity to remain connected with their alma mater. They can mentor current students, provide valuable career advice, and share their post-graduation experiences, serving as a valuable resource for those preparing to enter the workforce.
+  \n  
+    CS-Talks is more than just a social platform; it represents a virtual campus community that bridges the gap between students and educators, promoting collaboration, knowledge sharing, and personal development. Whether seeking academic support, connecting with peers, or staying updated on campus life, CS-Talks offers a comprehensive solution for a richer university experience. Join today and become a part of the CS-Talks community, where education meets social interaction.
+    `,
   },
   {
     img: ibdesk,
