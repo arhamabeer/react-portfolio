@@ -30,7 +30,7 @@ function ProjectModal({ modalData, hideModal }) {
                   ? modalData.desc
                       .split("\n")
                       .map((paragraph, index) => <p key={index}>{paragraph}</p>)
-                  : "Description not available right now."}
+                  : "Description is not available right now."}
               </h4>
               <h2 className="font-bold text-xl mt-2">Technologies</h2>
               <h4 className="text-xs">{modalData.tech}</h4>
@@ -41,8 +41,9 @@ function ProjectModal({ modalData, hideModal }) {
           </div>
         </div>
         <div className="flex max-[768px]:w-full max-[768px]:flex-col max-[768px]:items-center w-2/6 justify-between items-start  px-3">
-          <button
-            //   onClick={() => navigate("/abt")}
+          <a
+            href={modalData.url !== "" && modalData.url}
+            target="_blank"
             className={
               styles.landBtnAbt +
               " flex items-center max-[768px]:w-2/4 justify-center"
@@ -56,7 +57,7 @@ function ProjectModal({ modalData, hideModal }) {
             >
               <RxExternalLink />
             </span>
-          </button>
+          </a>
           <button
             onClick={() => navigate("/contact")}
             className={
