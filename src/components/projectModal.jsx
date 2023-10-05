@@ -19,10 +19,10 @@ function ProjectModal({ modalData, hideModal }) {
             onClick={() => hideModal(false)}
           />
         </div>
-        <div className="flex justify-center h-4/6">
-          <div className="justify-center flex max-[768px]:flex-col p-3">
+        <div className="flex justify-center w-full h-[75%]">
+          <div className="justify-center w-full flex max-[768px]:flex-col max-[768px]:justify-between p-3">
             <div
-              className={`w-2/6 max-[768px]:w-full overflow-y-auto hideScrollBar`}
+              className={`w-5/12 max-[768px]:w-full max-[768px]:h-[25%] overflow-y-auto hideScrollBar`}
             >
               <h1 className="font-bold text-2xl">{modalData.name}</h1>
               <h4 className="text-xs">
@@ -35,7 +35,7 @@ function ProjectModal({ modalData, hideModal }) {
               <h2 className="font-bold text-xl mt-2">Technologies</h2>
               <h4 className="text-xs">{modalData.tech}</h4>
             </div>
-            <div className="w-4/6 max-[768px]:w-full  max-[768px]:mt-2 px-2">
+            <div className="w-7/12 max-[768px]:w-full max-[768px]:h-[70%]  max-[768px]:mt-2 px-2">
               <img src={modalData.img} className="w-full h-full" alt="" />
             </div>
           </div>
