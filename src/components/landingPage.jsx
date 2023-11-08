@@ -26,10 +26,12 @@ function LandingPage() {
           <span className="ml-[-40px] font-black  text-3xl hidden text-[#f74b07]">
             {open}
           </span>
-          <h1 className=" font-black text-[#f7ab07] text-5xl max-md:text-3xl">
+          <h1
+            className={`font-black text-[#f7ab07] text-5xl max-md:text-3xl ${styles.textStroke}`}
+          >
             I'M ARHAM ABEER.
           </h1>
-          <h1 className="my-2  text-4xl max-md:text-2xl font-black">
+          <h1 className="my-2  text-[#f7ab07] text-4xl max-md:text-2xl font-black">
             SOFTWARE ENGINEER
           </h1>
           <span className="ml-[-40px] text-[#f74b07] font-black  text-3xl hidden ">

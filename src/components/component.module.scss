@@ -154,6 +154,12 @@
   background-color: $greyDefault;
 }
 
+.textStroke {
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #f7ab07;
+}
+
 @media (min-width: 320px) and (max-width: 767px) {
   .landingPic {
     left: auto;
