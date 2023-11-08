@@ -10,7 +10,7 @@ function ProjectModal({ modalData, hideModal }) {
 
   const navigate = useNavigate();
   return (
-    <div className="projModal flex items-center absolute h-[100vh] flex-col max-[768px]:justify-center bg-projModalBg w-full p-[4%] text-white z-50">
+    <div className="projModal flex items-center absolute h-[100vh] flex-col max-[768px]:justify-center bg-projModalBg w-full p-[4%]  text-white z-500">
       <div className="bg-[#111111] h-full max-[768px]:h-[80%] w-4/5 max-[768px]:w-full rounded-lg modalShadow">
         <div className="flex w-full justify-end mb-3">
           <ImCross
@@ -19,28 +19,31 @@ function ProjectModal({ modalData, hideModal }) {
             onClick={() => hideModal(false)}
           />
         </div>
-        <div className="flex justify-center h-4/6">
-          <div className="justify-center flex max-[768px]:flex-col p-3">
+        <div className="flex justify-center w-full h-[75%]">
+          <div className="justify-center w-full flex max-[768px]:flex-col max-[768px]:justify-between p-3">
             <div
-              className={`w-2/6 max-[768px]:w-full overflow-y-auto hideScrollBar`}
+              className={`w-5/12 max-[768px]:w-full max-[768px]:h-[25%] overflow-y-auto hideScrollBar`}
             >
               <h1 className="font-bold text-2xl">{modalData.name}</h1>
               <h4 className="text-xs">
                 {modalData.desc
                   ? modalData.desc
-                  : "Description not available right now."}
+                      .split("\n")
+                      .map((paragraph, index) => <p key={index}>{paragraph}</p>)
+                  : "Description is not available right now."}
               </h4>
               <h2 className="font-bold text-xl mt-2">Technologies</h2>
               <h4 className="text-xs">{modalData.tech}</h4>
             </div>
-            <div className="w-4/6 max-[768px]:w-full  max-[768px]:mt-2 px-2">
+            <div className="w-7/12 max-[768px]:w-full max-[768px]:h-[70%]  max-[768px]:mt-2 px-2">
               <img src={modalData.img} className="w-full h-full" alt="" />
             </div>
           </div>
         </div>
         <div className="flex max-[768px]:w-full max-[768px]:flex-col max-[768px]:items-center w-2/6 justify-between items-start  px-3">
-          <button
-            //   onClick={() => navigate("/abt")}
+          <a
+            href={modalData.url !== "" && modalData.url}
+            target="_blank"
             className={
               styles.landBtnAbt +
               " flex items-center max-[768px]:w-2/4 justify-center"
@@ -54,7 +57,7 @@ function ProjectModal({ modalData, hideModal }) {
             >
               <RxExternalLink />
             </span>
-          </button>
+          </a>
           <button
             onClick={() => navigate("/contact")}
             className={

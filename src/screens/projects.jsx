@@ -16,8 +16,8 @@ function Projects() {
 
   return (
     <div
-      className={`h-auto flex flex-col z-10 max-lg:mb-14 ${
-        modalData.open && "overflow-hidden"
+      className={`h-[100vh] flex flex-col z-10 max-lg:mb-14 ${
+        modalData.open && "h-[90vh] overflow-hidden"
       }`}
     >
       <div className="flex items-center justify-center my-12">
@@ -26,7 +26,7 @@ function Projects() {
         </h1>
       </div>
 
-      <div className="flex justify-center items-center text-white flex-wrap  ">
+      <div className="flex justify-center items-center text-white flex-wrap ">
         {myProjects.map((proj, ind) => (
           <ProjectCard
             project={proj}
