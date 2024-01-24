@@ -13,7 +13,7 @@ import { HiMailOpen } from "react-icons/hi";
 const contacts = [
   {
     title: "LOCATION",
-    decs: "Karachi, Pakistan + Remote",
+    decs: "Dubai, United Arab Emirates + Remote",
     icon: <FaMapMarkedAlt size={35} className="mr-3 " color="#ffb400" />,
   },
   {
