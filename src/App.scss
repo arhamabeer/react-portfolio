@@ -78,3 +78,10 @@
     transform: scale(1);
   }
 }
+
+/*  SWAL ALERT  */
+@media screen and (max-width: 767px) {
+  .swal2-container {
+    display: flex !important;
+  }
+}
