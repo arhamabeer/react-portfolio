@@ -67,7 +67,7 @@ function ContactForm() {
       }
     } else {
       Swal.fire({
-        position: "top-right",
+        position: "center",
         icon: "error",
         title: "Try to submit without errors",
         showConfirmButton: false,
