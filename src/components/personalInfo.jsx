@@ -20,7 +20,7 @@ function PersonalInfo({ aboutCardsData }) {
               </h4>
               <h4 className="text-sm my-3">
                 Experience:{" "}
-                <span className="font-medium text-white">2+ Years</span>
+                <span className="font-medium text-white">3+ Years</span>
               </h4>
               <h4 className="text-sm my-3">
                 Open to Work:{" "}

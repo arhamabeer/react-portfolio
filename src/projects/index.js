@@ -165,7 +165,7 @@ export const myProjects = [
 ];
 
 export const aboutCardsData = [
-  { numbers: `2+`, stat: "YEARS OF EXPERIENCE" },
+  { numbers: `3+`, stat: "YEARS OF EXPERIENCE" },
   { numbers: `25+`, stat: "COMPLETED PROJECTS " },
   { numbers: `5+`, stat: "HAPPY CLIENTS & COMPANIES" },
   { numbers: `10+`, stat: "RECOMMENDATIONS" },
