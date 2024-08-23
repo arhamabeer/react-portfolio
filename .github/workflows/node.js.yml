@@ -1,6 +1,5 @@
 # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
-
 name: Node.js CI
 
 on:
@@ -15,10 +14,10 @@ jobs:
     strategy:
       matrix:
         node-version: [16.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
     - uses: actions/checkout@v4
+
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
       with:
@@ -27,8 +26,10 @@ jobs:
 
     - name: Install Yarn
       run: npm install -g yarn
-      
-    - name: Increase Node.js Memory Limit
+
+    - name: Increase Node.js Memory Limit for Yarn Install
       run: node --max-old-space-size=4096 $(which yarn) install --frozen-lockfile
 
-    - run: yarn run build --if-present
+    - name: Build Project
+      run: yarn run build --if-present
+
