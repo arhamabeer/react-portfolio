@@ -15,5 +15,5 @@ jobs:
       run: docker pull arhamabeer/aaa-portfolio
 
     - name: Compose Up Docker Image
-      run: CI=false docker-compose up -d
+      run: CI=false docker compose up -d
 
