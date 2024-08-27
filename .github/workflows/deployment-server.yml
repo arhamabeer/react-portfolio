@@ -14,6 +14,9 @@ jobs:
     steps:
     - name: Pull docker image
       run: docker pull arhamabeer/aaa-portfolio:latest
-
+      
+    - name: Down the running container
+      run: docker compose down || true
+    
     - name: Compose up docker image
       run: CI=false docker compose up -d
