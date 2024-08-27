@@ -13,10 +13,12 @@ jobs:
 
     steps:
     - name: Pull docker image
-      run: docker pull arhamabeer/aaa-portfolio:latest
+      run: docker pull ${{ secrets.DOCKER_REPO }}
       
     - name: Down the running container
-      run: docker compose down || true
+      run: |
+        docker compose down || true
+        docker image prune -a -f || true
     
     - name: Compose up docker image
       run: CI=false docker compose up -d
