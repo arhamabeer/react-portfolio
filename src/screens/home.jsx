@@ -6,6 +6,7 @@ import Projects from "../components/projects";
 function Home() {
   return (
     <div>
+      <h1>TESTING</h1>
       <LandingPage />
     </div>
   );
