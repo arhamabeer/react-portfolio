@@ -8,24 +8,12 @@ on:
 
 jobs:
   build:
-
     runs-on: self-hosted
 
-    strategy:
-      matrix:
-        node-version: [16.x]
-
     steps:
-    - uses: actions/checkout@v4
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-  
     - name: Pull Docker Image
-      run: docker pull arhamabeer/aaa-portfolio  
+      run: docker pull arhamabeer/aaa-portfolio
 
-    - name: Up Pulled-Image
-      run: CI=false docker compose up -d
+    - name: Compose Up Docker Image
+      run: CI=false docker-compose up -d
 
